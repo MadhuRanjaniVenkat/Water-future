@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Water Usage</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Week 1', 4],
+          ['Week 2', 2],
+          ['Week 3', 1],
+          ['Week 4', 3],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Water consumption in October 2017',
+                       'width':500,
+                       'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div2'));
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Week 1', 2],
+          ['Week 2', 1],
+          ['Week 3', 4],
+          ['Week 4', 2],
+        ]);
+
+        // Set chart options
+        var options = {'title':'Water consumption in November 2017',
+                       'width':500,
+                       'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div1'));
+        chart.draw(data, options);
+      }
+    </script>
+    <style>
+    	body{
+    		background: url(bg.jpg);
+    	}
+    	.title{
+    		font-family: Times New Roman;
+
+    	}
+    	.size{
+    		font-size: 22px;
+    	}
+    	.pad{
+    		padding-left: 450px;
+    	}
+    	.size1{
+    		width: 50%;
+    		height: inherit;
+    	}
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<p style="text-align:center" class="title"><font color ="white" size="+5">Water Usage of XXXXXX</font><br><br></p>
+<div class="container">
+	<p><font color="white"><label class="size">Name:</label> XXXXX     &nbsp;&nbsp;  <label class="size">Area:</label>YYYYYYY<br><br>
+    <label class="size">Address:</label>10,Street,Colony &nbsp;&nbsp; <label class="size">City:</label>ZZZZZZZZ <br><br>
+	<label class="size">No. of Members in Family:</label>4  &nbsp;&nbsp; <label class="size">Adult:</label>2 &nbsp; <label class="size">Children:</label>2</font></p>
+</div>
+<p>
+   <div id="chart_div2" class="size1 pad"></div>
+   <div id="chart_div1" class="size1 pad"></div>
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
